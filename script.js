@@ -1,4 +1,3 @@
-//your JS code here. If required.
 const ageInput = document.getElementById("age");
 const nameInput = document.getElementById("name");
 const btn = document.getElementById("btn");
@@ -15,14 +14,15 @@ function checkVotingEligibility(age, name) {
   });
 }
 
-btn.addEventListener("click", (e) => {
+const form = document.getElementById("votingForm");
+form.addEventListener("submit", (e) => {
   e.preventDefault(); 
 
   const age = ageInput.value.trim();
   const name = nameInput.value.trim();
 
   if (!age || !name) {
-    alert("Please enter valid details.");
+    alert("Please enter valid details"); 
     return;
   }
 
